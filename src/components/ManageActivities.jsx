@@ -25,15 +25,15 @@ const ManageActivities = (props) => {
     useEffect(() => {
         //console.log(editActivity);
     }, [editActivity]);
-    useEffect(() => {
-        //console.log(editActivity);
-    }, [actvitiesArr]);
+    
 
     const updateActivity = () => {
         const updatedArr = actvitiesArr.map((act) => {
 
             if (act.id == editActivity.id) {
                 return editActivity
+            }else{
+                return act;
             }
 
         });
@@ -41,7 +41,9 @@ const ManageActivities = (props) => {
         setModalOpen(false);
         setEditActivity(null);
     }
-
+useEffect(() => {
+        //console.log(editActivity);
+    }, [actvitiesArr]);
 
 
 
