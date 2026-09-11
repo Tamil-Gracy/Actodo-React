@@ -8,8 +8,8 @@ const Cards = (props) => {
   useEffect(() => {
           //console.log(editActivity);
       }, [props.actvitiesArr]);
-  const completedArr = props.actvitiesArr.filter((act) => act.status === 'completed')
-  const pendingArr = props.actvitiesArr.filter((act) => act.status === 'pending')
+  const completedArr = props.actvitiesArr.filter((act) => act?.status === 'completed')
+  const pendingArr = props.actvitiesArr.filter((act) => act?.status === 'pending')
     return (
          <div className='cards grid grid-cols-1 md:grid-cols-3 gap-5 pt-5'>
             <Card bgColor="bg-purple-200 rounded" title="Today" desc={formatted}></Card>
