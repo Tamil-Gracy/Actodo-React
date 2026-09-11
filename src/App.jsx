@@ -3,13 +3,15 @@ import './App.css'
 import Header from './components/Header'
 import Cards from './components/Cards'
 import ActodoList from './components/ActodoList'
+import { useLocation } from 'react-router-dom'
 
 function App() {
   const [actvitiesArr, setActivityArr]=useState([]);
+  const userData = useLocation();
   return (
     <div className='bg-black p-5 md:px-15 md:py-10'>
       <div className='bg-white p-5 md:p-10 border rounded-xl'>
-       <Header />
+       <Header userData={userData}/>
        <Cards actvitiesArr={actvitiesArr} setActivityArr={setActivityArr}/>
        <ActodoList actvitiesArr={actvitiesArr} setActivityArr={setActivityArr}/>
       </div>
