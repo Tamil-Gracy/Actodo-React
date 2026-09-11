@@ -6,9 +6,6 @@ const formatted = today.toLocaleDateString('en-GB', {
   year: 'numeric'
 });
 const Cards = (props) => {
-  useEffect(() => {
-          //console.log(editActivity);
-      }, [props.actvitiesArr]);
   const completedArr = props.actvitiesArr.filter((act) => act?.status === 'completed')
   const pendingArr = props.actvitiesArr.filter((act) => act?.status === 'pending')
     return (
